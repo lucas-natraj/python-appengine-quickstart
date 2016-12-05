@@ -22,4 +22,27 @@ unset PUBSUB_EMULATOR_HOST
 
 ## Setup
 
-Virtual env
+```
+virtualenv venv
+
+# windows
+venv\scripts\activate.bat
+
+# bash
+
+pip install -r requirements.txt
+
+python main.py
+
+
+# deploy
+pip install -r requirements.txt -t lib
+gcloud app deploy --project=the-depot --version=v1 ./app.std.yaml
+
+# browse to
+(service) https://talk-demo-dot-<projectname>.appspot.com
+(default) https://<projectname>.appspot.com
+
+
+```
+
