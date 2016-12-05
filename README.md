@@ -19,3 +19,7 @@ pkill -f emulators
 unset PUBSUB_EMULATOR_HOST
 
 ```
+
+## Setup
+
+Virtual env
