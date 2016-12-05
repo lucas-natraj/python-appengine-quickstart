@@ -1,0 +1,8 @@
+###### flex
+runtime: python
+env: flex
+entrypoint: gunicorn -b :$PORT main:app
+service: talk-0
+
+runtime_config:
+  python_version: 3
