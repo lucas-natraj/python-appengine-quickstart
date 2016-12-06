@@ -1,5 +1,4 @@
-Flask==0.11.1
+flask
 flask-cors
 gunicorn==19.6.0
 google-cloud
-google-cloud-datastore
