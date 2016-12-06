@@ -34,9 +34,7 @@ pip install -r requirements.txt
 
 python main.py
 
-
 # deploy
-pip install -r requirements.txt -t lib
 gcloud app deploy --project=the-depot --version=v1 ./app.std.yaml
 
 # browse to
