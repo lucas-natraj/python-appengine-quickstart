@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [{
+        "name": "Flask",
+        "type": "python",
+        "request": "launch",
+        "stopOnEntry": false,
+        "pythonPath": "${config.python.pythonPath}",
+        "program": "${workspaceRoot}/venv/bin/flask",
+        "cwd": "${workspaceRoot}",
+        "env": {
+            "FLASK_APP": "${workspaceRoot}/main.py"
+        },
+        "args": [
+            "run",
+            "--no-debugger",
+            "--no-reload"
+        ],
+        "debugOptions": [
+            "WaitOnAbnormalExit",
+            "WaitOnNormalExit",
+            "RedirectOutput"
+        ]
+    }]
+}
