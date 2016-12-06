@@ -8,7 +8,7 @@ Deploys to `standard` or `flex` app engine.
 
 ```bash
 gcloud beta emulators datastore start &
-(gcloud beta emulators datastore env-init)
+`gcloud beta emulators datastore env-init`
 
 # emulators - start
 gcloud beta emulators pubsub start &
