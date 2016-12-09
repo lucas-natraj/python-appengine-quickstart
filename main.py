@@ -69,8 +69,10 @@ def server_error(err):
 if __name__ == '__main__':
     # Used for running locally
     if os.environ.get('VSCODE_PID'):
-        # Debugging from VSCODE, see: https://github.com/DonJayamanne/pythonVSCode/wiki/Debugging:-Flask#solution-2
+        # Debugging from VSCODE, see:
+        # https://github.com/DonJayamanne/pythonVSCode/wiki/Debugging:-Flask#solution-2
+
         app.run(host='127.0.0.1', port=8080, debug=False, use_reloader=False)
     else:
         # From the command line
-    app.run(host='127.0.0.1', port=8080, debug=True)
+        app.run(host='127.0.0.1', port=8080, debug=True)
