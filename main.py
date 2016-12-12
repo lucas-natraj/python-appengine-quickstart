@@ -3,6 +3,7 @@
 import logging
 import json
 import base64
+import os
 
 from flask import Flask, request
 from flask import jsonify
@@ -18,6 +19,7 @@ app = Flask(__name__)
 def hello_world():
     """hello world"""
     return 'Hello World!'
+
 
 @app.route('/pubsub/receive', methods=['POST'])
 def pubsub_receive():
@@ -66,4 +68,11 @@ def server_error(err):
 
 if __name__ == '__main__':
     # Used for running locally
-    app.run(host='127.0.0.1', port=8080, debug=True)
+    if os.environ.get('VSCODE_PID'):
+        # Debugging from VSCODE, see:
+        # https://github.com/DonJayamanne/pythonVSCode/wiki/Debugging:-Flask#solution-2
+
+        app.run(host='127.0.0.1', port=8080, debug=False, use_reloader=False)
+    else:
+        # From the command line
+        app.run(host='127.0.0.1', port=8080, debug=True)

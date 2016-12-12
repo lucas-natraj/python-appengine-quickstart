@@ -17,7 +17,13 @@ skip_files:
 - ^(.*/)?\..*$
 
 # These packages are either preinstalled or not needed on the actual deployed application
-- (venv/lib/python2.7/site-packages/appengine_sdk.*)
-- (venv/lib/python2.7/site-packages/setuptools/.*)
-- (venv/lib/python2.7/site-packages/nose.*)
-- (venv/lib/python2.7/site-packages/pip.*)
+# Mac/Linux
+# - (venv/lib/python2.7/site-packages/appengine_sdk.*)
+# - (venv/lib/python2.7/site-packages/setuptools/.*)
+# - (venv/lib/python2.7/site-packages/nose.*)
+# - (venv/lib/python2.7/site-packages/pip.*)
+# Windows
+- (venv/Lib/site-packages/appengine_sdk.*)
+- (venv/Lib/site-packages/setuptools/.*)
+- (venv/Lib/site-packages/nose.*)
+- (venv/Lib/site-packages/pip.*)
