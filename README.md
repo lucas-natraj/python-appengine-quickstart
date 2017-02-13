@@ -27,7 +27,7 @@ virtualenv venv
 - Activate the virtual environment
     - Windows DOS command: `venv\scripts\activate.bat`
     - Windows Powershell: `venv\scripts\activate.ps1`
-    - Bash: `venv\bin\activate`
+    - Bash: `source venv/bin/activate`
 
 ### Install requirements
 ```
