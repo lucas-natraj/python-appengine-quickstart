@@ -1,4 +1,4 @@
-# Quick Start for Python Google App Engine
+# Quickstart for Python Google App Engine
 
 ## Setup
 
